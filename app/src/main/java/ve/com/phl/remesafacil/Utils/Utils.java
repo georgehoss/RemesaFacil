@@ -8,7 +8,7 @@ import java.util.Date;
  */
 public class Utils {
     public static String getDateString() {
-        SimpleDateFormat dateFormat = new SimpleDateFormat(" HH:mm dd/MM/yyyy");
+        SimpleDateFormat dateFormat = new SimpleDateFormat(" HH:mm dd/MM/yyyy"); //
         return dateFormat.format(new Date());
     }
 }
