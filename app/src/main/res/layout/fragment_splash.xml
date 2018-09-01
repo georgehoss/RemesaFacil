@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bt_singIn"
-        android:text="Iniciar Sesión"
+        android:text="@string/iniciar_sesi_n"
         />
 
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bt_signUp"
-        android:text="Registrarse"
+        android:text="@string/registrarse"
         />
 
 </LinearLayout>

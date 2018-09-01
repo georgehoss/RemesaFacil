@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +22,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ve.com.phl.remesafacil.R;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class LoginFragment extends Fragment implements LoginContract.View {
 
     private LoginContract.Presenter mPresenter;
@@ -47,7 +44,7 @@ public class LoginFragment extends Fragment implements LoginContract.View {
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment}
         View view = inflater.inflate(R.layout.fragment_login, container, false);
@@ -63,30 +60,30 @@ public class LoginFragment extends Fragment implements LoginContract.View {
 
     @Override
     public void showUserError() {
-        mEtEmail.setError("El correo no puede estar vacío");
+        mEtEmail.setError(getString(R.string.correo_vacio));
         mEtEmail.requestFocus();
     }
 
     @Override
     public void showPasswordError() {
-        mEtPsw.setError("La contraseña no puede estar vacía");
+        mEtPsw.setError(getString(R.string.contrasena_vacia));
         mEtPsw.requestFocus();
     }
 
     @Override
     public void showLoginError() {
-        Toast.makeText(getActivity(), "Correo no registrado o contraseña incorrecta, verifica los datos e intenta de nuevo", Toast.LENGTH_LONG).show();
+        Toast.makeText(getActivity(),getString(R.string.login_error), Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void showEmailError() {
-        mEtEmail.setError("Debe introducir un correo válido");
+        mEtEmail.setError(getString(R.string.correo_invalido));
         mEtEmail.requestFocus();
     }
 
     @Override
     public void showPswError() {
-        mEtPsw.setError("La contraseña debe contener al menos 6 caracteres");
+        mEtPsw.setError(getString(R.string.contrasena_corta));
         mEtPsw.requestFocus();
     }
 

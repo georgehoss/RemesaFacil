@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/et_firstName"
-            android:hint="Nombre"
+            android:hint="@string/nombre"
             android:inputType="textPersonName"
             />
         <EditText
@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/et_lastName"
-            android:hint="Apellido"
+            android:hint="@string/apellido"
             android:inputType="textPersonName"
             />
     </LinearLayout>
@@ -36,7 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et_number"
-        android:hint="Número de teléfono"
+        android:hint="@string/n_mero_de_tel_fono"
         android:inputType="number"
         />
 
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et_email"
-        android:hint="Correo"
+        android:hint="@string/correo"
         android:inputType="textEmailAddress"
         />
 
@@ -52,14 +52,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et_psw"
-        android:hint="Contraseña"
+        android:hint="@string/contrase_a"
         android:inputType="textPassword"
         />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar"
+        android:text="@string/registrar"
         android:id="@+id/bt_signUp"
         />
 

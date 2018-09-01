@@ -54,7 +54,7 @@ public class RegisterFragment extends Fragment implements RegisterContract.View 
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_register, container, false);
@@ -85,50 +85,50 @@ public class RegisterFragment extends Fragment implements RegisterContract.View 
 
     @Override
     public void showFirstNameError() {
-        mEtFirstName.setError("El nombre no puede estar vacío");
+        mEtFirstName.setError(getString(R.string.nombre_vacio));
         mEtFirstName.requestFocus();
     }
 
     @Override
     public void showLastNameError() {
-        mEtLastName.setError("El apellido no puede estar vacío");
+        mEtLastName.setError(getString(R.string.apellido_vacio));
         mEtLastName.requestFocus();
     }
 
     @Override
     public void showNumberError() {
-        mEtNumber.setError("Introduzca su numero de teléfono");
+        mEtNumber.setError(getString(R.string.numero_vacio));
         mEtNumber.requestFocus();
     }
 
     @Override
     public void showEmailError() {
-        mEtEmail.setError("El correo no puede estar vacío");
+        mEtEmail.setError(getString(R.string.correo_vacio));
         mEtEmail.requestFocus();
     }
 
     @Override
     public void showEmailFormatError() {
-        mEtEmail.setError("Debe introducir un correo válido");
+        mEtEmail.setError(getString(R.string.correo_invalido));
         mEtEmail.requestFocus();
     }
 
     @Override
     public void showPswLengthError() {
-        mEtPsw.setError("La contraseña debe contener al menos 6 caracteres");
+        mEtPsw.setError(getString(R.string.contrasena_corta));
         mEtPsw.requestFocus();
     }
 
     @Override
     public void showPasswordError() {
-        mEtPsw.setError("La contraseña no puede estar vacía");
+        mEtPsw.setError(getString(R.string.contrasena_vacia));
         mEtPsw.requestFocus();
     }
 
     @Override
     public void signUpUser(final String firstName, final String lastName, String number, String email, String password) {
         mBtSignUp.setEnabled(false);
-
+        if (getActivity()!=null)
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
@@ -137,7 +137,7 @@ public class RegisterFragment extends Fragment implements RegisterContract.View 
                         mBtSignUp.setEnabled(true);
                         if (!task.isSuccessful()) {
 
-                            if (task.getException().getMessage()!=null && task.getException().getMessage().contains("email address is already in use"))
+                            if (task.getException()!=null && task.getException().getMessage()!=null && task.getException().getMessage().contains("email address is already in use"))
                                 showEmailDuplicatedError();
                             else
                                 showSingUpFailedError();
@@ -160,10 +160,6 @@ public class RegisterFragment extends Fragment implements RegisterContract.View 
         Toast.makeText(getActivity(), getString(R.string.error_crear_cuenta), Toast.LENGTH_SHORT).show();
     }
 
-    @Override
-    public void showSignUpSuccessFull() {
-        Toast.makeText(getContext(), getString(R.string.cuenta_con_exito), Toast.LENGTH_SHORT).show();
-    }
 
     @Override
     public void updateUserInfo(String name) {

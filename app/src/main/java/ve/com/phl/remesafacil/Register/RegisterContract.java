@@ -18,7 +18,6 @@ public interface RegisterContract {
         void signUpUser(String firstName, String lastName, String number, String email, String password);
         void showEmailDuplicatedError();
         void showSingUpFailedError();
-        void showSignUpSuccessFull();
         void updateUserInfo(String name);
     }
     interface Presenter extends BasePresenter<View> {

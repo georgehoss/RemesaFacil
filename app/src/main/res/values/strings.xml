@@ -4,4 +4,21 @@
     <string name="error_correo_en_uso">Ya existe una cuenta asociada a ese correo electrónico</string>
     <string name="error_crear_cuenta">No se ha podido crear la cuenta, intente de nuevo</string>
     <string name="cuenta_con_exito">Cuenta creada con éxito!</string>
+    <string name="nombre_vacio">El nombre no puede estar vacío</string>
+    <string name="apellido_vacio">El apellido no puede estar vacío</string>
+    <string name="numero_vacio">Introduzca su numero de teléfono</string>
+    <string name="correo_vacio">El correo no puede estar vacío</string>
+    <string name="correo_invalido">Debe introducir un correo válido</string>
+    <string name="contrasena_corta">La contraseña debe contener al menos 6 caracteres</string>
+    <string name="contrasena_vacia">La contraseña no puede estar vacía</string>
+    <string name="login_error">Correo no registrado o contraseña incorrecta, verifica los datos e intenta de nuevo</string>
+    <string name="correo">Correo</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="salir">Salir</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="n_mero_de_tel_fono">Número de teléfono</string>
+    <string name="registrar">Registrar</string>
+    <string name="registrarse">Registrarse</string>
 </resources>

@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bt_signOut"
-        android:text="Salir"
+        android:text="@string/salir"
         />
 
 </LinearLayout>
