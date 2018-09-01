@@ -9,7 +9,11 @@ import ve.com.phl.remesafacil.BaseView;
  */
 public interface MainContract {
     interface View extends BaseView<Presenter> {
-
+        void getUserInfo();
+        void setUserInfo(String name);
+        void setDate(String date);
     }
-    interface Presenter extends BasePresenter<View> {}
+    interface Presenter extends BasePresenter<View> {
+        boolean validName (String name);
+    }
 }

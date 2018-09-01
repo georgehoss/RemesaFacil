@@ -21,4 +21,8 @@
     <string name="n_mero_de_tel_fono">Número de teléfono</string>
     <string name="registrar">Registrar</string>
     <string name="registrarse">Registrarse</string>
+    <string name="tasa_del_d_a">Tasa del día:</string>
+    <string name="_0_12">0.12</string>
+    <string name="solicitar">Solicitar</string>
+    <string name="pagos">Pagos</string>
 </resources>
