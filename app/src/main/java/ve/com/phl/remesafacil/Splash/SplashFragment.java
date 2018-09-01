@@ -7,12 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+import ve.com.phl.remesafacil.Login.LoginFragment;
 import ve.com.phl.remesafacil.R;
+import ve.com.phl.remesafacil.Register.RegisterFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SplashFragment extends Fragment {
+public class SplashFragment extends Fragment implements SplashContract.View {
 
 
     public SplashFragment() {
@@ -20,11 +24,35 @@ public class SplashFragment extends Fragment {
     }
 
 
+    @OnClick(R.id.bt_signUp) void singUp(){
+        launchSingUp();
+    }
+
+    @OnClick(R.id.bt_singIn) void singIn(){
+        launchSingIn();
+    }
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_splash, container, false);
+        View view = inflater.inflate(R.layout.fragment_splash, container, false);
+        ButterKnife.bind(this,view);
+        return  view;
     }
 
+    @Override
+    public void launchSingUp() {
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new RegisterFragment()).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void launchSingIn() {
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new LoginFragment()).addToBackStack(null).commit();
+    }
+
+    @Override
+    public void bindPresenter(SplashContract.Presenter presenter) {
+
+    }
 }

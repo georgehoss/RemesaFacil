@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">RemesaFacil</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error_correo_en_uso">Ya existe una cuenta asociada a ese correo electrónico</string>
+    <string name="error_crear_cuenta">No se ha podido crear la cuenta, intente de nuevo</string>
+    <string name="cuenta_con_exito">Cuenta creada con éxito!</string>
 </resources>

@@ -12,11 +12,20 @@ public interface RegisterContract {
         void showLastNameError();
         void showNumberError();
         void showEmailError();
+        void showEmailFormatError();
+        void showPswLengthError();
         void showPasswordError();
+        void signUpUser(String firstName, String lastName, String number, String email, String password);
+        void showEmailDuplicatedError();
+        void showSingUpFailedError();
+        void showSignUpSuccessFull();
+        void updateUserInfo(String name);
     }
     interface Presenter extends BasePresenter<View> {
         void register (String firstName, String lastName, String number, String email, String password);
         boolean validData(String firstName, String lastName, String number, String email, String password);
+        boolean validEmail(CharSequence email);
+        boolean validPsw (CharSequence psw);
 
     }
 }

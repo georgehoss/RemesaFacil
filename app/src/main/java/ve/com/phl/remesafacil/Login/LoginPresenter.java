@@ -14,26 +14,44 @@ public class LoginPresenter implements LoginContract.Presenter {
 
     @Override
     public void login(String user, String password) {
-        if (!validData(user,password)) return;
+        if (validData(user,password))
+            mView.signIn(user,password);
     }
 
     @Override
     public boolean validData(String user, String psw) {
-        boolean valid = true;
 
         if (user.isEmpty())
         {
             mView.showUserError();
-            valid = false;
+            return false;
         }
-
+        else
+        if (!validEmail(user))
+            return  false;
+        else
         if (psw.isEmpty())
         {
             mView.showPasswordError();
-            valid = false;
+            return false;
         }
+        return validPsw(psw);
+    }
 
-        return valid;
+    @Override
+    public boolean validEmail(CharSequence email) {
+        if (!(email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches())) {
+            mView.showEmailError();
+        }
+        return email != null && android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
+    }
+
+    @Override
+    public boolean validPsw(CharSequence psw) {
+        if (!(psw != null && psw.length()>=6)) {
+           mView.showPswError();
+        }
+        return psw != null && psw.length()>=6;
     }
 
     @Override

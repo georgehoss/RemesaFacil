@@ -11,9 +11,14 @@ public interface LoginContract {
         void showUserError();
         void showPasswordError();
         void showLoginError();
+        void showEmailError();
+        void showPswError();
+        void signIn(String user, String psw);
     }
     interface Presenter extends BasePresenter<View> {
         void login(String user, String password);
         boolean validData(String user,String psw);
+        boolean validEmail(CharSequence email);
+        boolean validPsw (CharSequence psw);
     }
 }

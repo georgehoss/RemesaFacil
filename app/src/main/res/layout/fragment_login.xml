@@ -14,4 +14,18 @@
         android:id="@+id/et_email"
         />
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="Contraseña"
+        android:id="@+id/et_psw"
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_singIn"
+        android:text="Iniciar Sesión"
+        />
+
 </LinearLayout>
