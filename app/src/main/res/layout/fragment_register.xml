@@ -5,8 +5,52 @@
     android:layout_height="match_parent"
     tools:context=".Register.RegisterFragment"
     android:orientation="vertical"
-    android:gravity="center"
+    android:background="@drawable/bg_register"
     >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remesa Fácil Centro"
+        android:textColor="#b8c6cf"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="end"
+        />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo_principal_app"
+        android:layout_marginEnd="20dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Ingresa tus datos"
+        android:textColor="@color/colorHint"
+
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,6 +65,15 @@
             android:id="@+id/et_firstName"
             android:hint="@string/nombre"
             android:inputType="textPersonName"
+            android:background="@drawable/background_rectangle"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
+            android:imeOptions="actionNext"
+            android:nextFocusDown="@id/et_lastName"
+            android:nextFocusForward="@id/et_lastName"
             />
         <EditText
             android:layout_width="0dp"
@@ -29,6 +82,12 @@
             android:id="@+id/et_lastName"
             android:hint="@string/apellido"
             android:inputType="textPersonName"
+            android:background="@drawable/background_rectangle"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorHint"
+            android:textStyle="bold"
+            android:layout_margin="10dp"
             />
     </LinearLayout>
 
@@ -38,6 +97,13 @@
         android:id="@+id/et_number"
         android:hint="@string/n_mero_de_tel_fono"
         android:inputType="number"
+        android:background="@drawable/background_rectangle"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorHint"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:layout_margin="10dp"
         />
 
     <EditText
@@ -46,6 +112,12 @@
         android:id="@+id/et_email"
         android:hint="@string/correo"
         android:inputType="textEmailAddress"
+        android:background="@drawable/background_rectangle"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorHint"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
         />
 
     <EditText
@@ -54,13 +126,26 @@
         android:id="@+id/et_psw"
         android:hint="@string/contrase_a"
         android:inputType="textPassword"
+        android:background="@drawable/background_rectangle"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorHint"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
         />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_width="95dp"
+        android:layout_height="80dp"
         android:text="@string/registrar"
         android:id="@+id/bt_signUp"
+        android:theme="@style/AppTheme.Button"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_gravity="end"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/boton_grande"
         />
 
 </LinearLayout>

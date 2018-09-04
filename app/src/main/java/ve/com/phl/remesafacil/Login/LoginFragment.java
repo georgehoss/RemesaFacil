@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,6 +22,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import ve.com.phl.remesafacil.R;
+import ve.com.phl.remesafacil.Register.RegisterFragment;
 
 
 public class LoginFragment extends Fragment implements LoginContract.View {
@@ -31,6 +33,8 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     @BindView(R.id.et_psw) EditText mEtPsw;
     @BindView(R.id.bt_singIn) Button mBtLogin;
 
+
+
     public LoginFragment() {
         // Required empty public constructor
     }
@@ -40,6 +44,13 @@ public class LoginFragment extends Fragment implements LoginContract.View {
     @OnClick(R.id.bt_singIn) void singIn()
     {
         mPresenter.login(mEtEmail.getText().toString().trim(),mEtPsw.getText().toString().trim());
+    }
+
+    @OnClick(R.id.tv_password) void restorePassword(){
+        passwordReset();
+    }
+    @OnClick(R.id.tv_register) void registerFragment(){
+        launchRegister();
     }
 
 
@@ -102,6 +113,31 @@ public class LoginFragment extends Fragment implements LoginContract.View {
                         }
                     }
                 });
+    }
+
+    @Override
+    public void launchRegister() {
+        if (getActivity()!=null)
+            getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.container, new RegisterFragment()).commit();
+    }
+
+    @Override
+    public void passwordReset() {
+        if (mPresenter.validEmail(mEtEmail.getText().toString().trim()))
+            mAuth.sendPasswordResetEmail(mEtEmail.getText().toString().trim())
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                showPswResetMsg(mEtEmail.getText().toString().trim());
+                            }
+                        }
+                    });
+    }
+
+    @Override
+    public void showPswResetMsg(String email) {
+        Toast.makeText(getActivity(), getString(R.string.correo_restauracion) + email, Toast.LENGTH_LONG).show();
     }
 
 

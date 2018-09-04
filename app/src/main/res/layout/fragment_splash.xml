@@ -4,22 +4,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/bg_splash"
     tools:context=".Splash.SplashFragment">
 
-    <Button
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:background="@drawable/logo_principal_app"
+        android:layout_marginTop="40dp"
+        />
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bt_singIn"
-        android:text="@string/iniciar_sesi_n"
+        android:text="Remesa Fácil Centro"
+        android:gravity="center"
+        android:textColor="#b8c6cf"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:layout_marginBottom="70dp"
+        android:textStyle="bold"
         />
 
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
         android:id="@+id/bt_signUp"
         android:text="@string/registrarse"
+        android:theme="@style/AppTheme.Button"
+        android:layout_gravity="end"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/boton_grande"
+        android:textAllCaps="true"
         />
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:id="@+id/bt_singIn"
+        android:text="@string/iniciar_sesi_n"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:theme="@style/AppTheme.Button"
+        android:textStyle="bold"
+        android:layout_gravity="start"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/boton_grande"
+        android:textAllCaps="true"
+        />
+
+
 
 </LinearLayout>

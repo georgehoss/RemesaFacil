@@ -14,6 +14,9 @@ public interface LoginContract {
         void showEmailError();
         void showPswError();
         void signIn(String user, String psw);
+        void launchRegister();
+        void passwordReset();
+        void showPswResetMsg(String email);
     }
     interface Presenter extends BasePresenter<View> {
         void login(String user, String password);

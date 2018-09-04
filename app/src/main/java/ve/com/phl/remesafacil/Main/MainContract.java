@@ -12,8 +12,17 @@ public interface MainContract {
         void getUserInfo();
         void setUserInfo(String name);
         void setDate(String date);
+        void setTasa(String value);
+        void setUserTasa(String userTasa);
+        void saveTasa(String tasa);
+        void hideTasa();
+        void showTasa();
+        void launchRequest();
+        void launchPayments();
     }
     interface Presenter extends BasePresenter<View> {
         boolean validName (String name);
+        String validTasa (String value);
+        void verifyAdmin(String user);
     }
 }

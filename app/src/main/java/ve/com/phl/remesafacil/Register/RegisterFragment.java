@@ -43,7 +43,7 @@ public class RegisterFragment extends Fragment implements RegisterContract.View 
         mPresenter.register(mEtFirstName.getText().toString().trim(),
                 mEtLastName.getText().toString().trim(),
                 mEtNumber.getText().toString(),
-                mEtEmail.getText().toString(),
+                mEtEmail.getText().toString().trim(),
                 mEtPsw.getText().toString().trim());
     }
 

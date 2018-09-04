@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Requests.RequestFragment"
+    android:orientation="vertical"
+    android:background="@drawable/bg_request"
+    android:animateLayoutChanges="true"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#b8c6cf"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="50dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_date"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:layout_gravity="end"
+        android:layout_marginEnd="70dp"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_tasa"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:text="@string/solicitud"
+        android:layout_marginStart="40dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monto_a_recibir"
+                    android:textColor="@color/colorHint"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tv_recept"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start"
+                    >
+                    <EditText
+                        android:id="@+id/et_bsS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:hint="@string/introduzca_el_monto_en_bss"
+                        android:inputType="numberDecimal"
+                        android:background="@drawable/background_rectangle"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorHint"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bss"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:padding="5dp"
+                        android:id="@+id/tv_simbol1"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/monto_a_transferir"
+                    android:textColor="@color/colorHint"
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tv_transf"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cambio"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:padding="5dp"
+                        android:id="@+id/tv_cambio"
+                        />
+                    <TextView
+                        android:id="@+id/et_pcl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:hint="@string/introduzca_el_monto_en_pcl"
+                        android:background="@drawable/background_rectangle"
+                        android:padding="10dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textColorHint="@color/colorHint"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pcl"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textColor="@color/colorAccent"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        android:padding="5dp"
+                        android:id="@+id/tv_simbol2"
+                        />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Datos del beneficiario"
+                    android:textColor="@color/colorHint"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="@string/cuenta_a_recibir"
+                    android:inputType="number"
+                    android:background="@drawable/background_rectangle"
+                    android:padding="10dp"
+                    android:maxLength="20"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Nombre"
+                    android:inputType="textPersonName"
+                    android:background="@drawable/background_rectangle"
+                    android:padding="10dp"
+                    android:maxLength="30"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <EditText
+                    android:id="@+id/et_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="Cédula o Rif"
+                    android:inputType="textCapWords"
+                    android:background="@drawable/background_rectangle"
+                    android:padding="10dp"
+                    android:maxLength="15"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+
+                <EditText
+                    android:id="@+id/et_observations"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:hint="@string/observaciones"
+                    android:inputType="textMultiLine"
+                    android:background="@drawable/background_rectangle"
+                    android:padding="10dp"
+                    android:maxLength="150"
+                    android:textColor="@color/colorPrimary"
+                    android:textColorHint="@color/colorHint"
+                    android:textStyle="bold"
+                    />
+                <Button
+                    android:id="@+id/bt_send"
+                    android:layout_width="80dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:background="@drawable/boton_grande"
+                    android:text="@string/enviar"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:theme="@style/AppTheme.Button" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

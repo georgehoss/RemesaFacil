@@ -14,15 +14,44 @@
     <string name="login_error">Correo no registrado o contraseña incorrecta, verifica los datos e intenta de nuevo</string>
     <string name="correo">Correo</string>
     <string name="contrase_a">Contraseña</string>
-    <string name="iniciar_sesi_n">Iniciar Sesión</string>
+    <string name="iniciar_sesi_n">Iniciar</string>
     <string name="salir">Salir</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="n_mero_de_tel_fono">Número de teléfono</string>
     <string name="registrar">Registrar</string>
     <string name="registrarse">Registrarse</string>
-    <string name="tasa_del_d_a">Tasa del día:</string>
-    <string name="_0_12">0.12</string>
+    <string name="tasa_del_d_a">Tasa del día</string>
+    <string name="_0_12">Modificar Tasa</string>
     <string name="solicitar">Solicitar</string>
     <string name="pagos">Pagos</string>
+    <string name="save">Guardar</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="entrar">Entrar</string>
+    <string name="no_estas_registrado_registrate_aqu">¿No estas Registrado? Registrate aquí</string>
+    <string name="olvide_mi_contrase_a">Olvide mi Contraseña</string>
+    <string name="correo_restauracion">Correo de restauración enviado a:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="solicitud">Solicitud</string>
+    <string name="monto_a_recibir">Para recibir:</string>
+    <string name="bss">BsS</string>
+    <string name="introduzca_el_monto_en_bss">Introduzca el monto en</string>
+    <string name="pcl">PCL</string>
+    <string name="introduzca_el_monto_en_pcl">monto en</string>
+    <string name="monto_a_transferir">Debes transferir:</string>
+    <string name="cuenta_a_recibir">Cuenta a Recibir</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="enviar">Enviar</string>
+    <string name="account_empty">El número de cuenta no puede estar vacío</string>
+    <string name="invalid_account">El número de cuenta es inválido!</string>
+    <string name="empty_name">El nombre no puede estar vacío!</string>
+    <string name="id_empty">Introduzca el numero de cédula o Rif!</string>
+    <string name="monto_empty">Debe introducir un monto</string>
+    <string name="cambio">Cambio</string>
+    <string name="solicitud_">Solicitud:</string>
+    <string name="enviar_comprobante">Enviar Comprobante</string>
+    <string name="ver_comprobante">Ver Comprobante</string>
+    <string name="cancelar_solicitud">Cancelar Solicitud</string>
 </resources>

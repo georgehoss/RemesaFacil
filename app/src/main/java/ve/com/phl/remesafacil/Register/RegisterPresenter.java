@@ -32,12 +32,12 @@ public class RegisterPresenter implements RegisterContract.Presenter {
             return false;
         }
         else
-        if (number.isEmpty())
+        /*if (number.isEmpty())
         {
             mView.showNumberError();
             return false;
         }
-        else
+        else*/
         if (email.isEmpty())
         {
             mView.showEmailError();
